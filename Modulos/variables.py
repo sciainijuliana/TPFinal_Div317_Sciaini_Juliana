@@ -18,10 +18,15 @@ BACKGROUND_DESEOS = "Imagenes/Deseos.png"
 BACKGROUND_TUTORIAL = "Imagenes/TUTORIAL_final.png"
 BACKGROUND_PAUSA = "Imagenes/pausa_2.jpg"
 BACKGROUND_ELECCION ="Imagenes/eleccion_mazo.png"
+BACKGROUND_TUTORIAL = "Imagenes/Inicio.jpg"
+CARRUSEL_TUTORIAL = ["Imagenes/TUTORIAL/1.png","Imagenes/TUTORIAL/2.png","Imagenes/TUTORIAL/3.png","Imagenes/TUTORIAL/4.png","Imagenes/TUTORIAL/5.png","Imagenes/TUTORIAL/6.png"]
 ICON_BOLA = "Imagenes/icons/1_star.png"
 ICON_STAR ="Imagenes/icons/star.png"
 ICON_HEAL = "Imagenes/icons/heal.png"
 ICON_JACKPOT = "Imagenes/icons/jackpot.png"
+ICON_SHIELD = "Imagenes/icons/shield_icon.png"
+ICON_SHIELD_ACTIVE = "Imagenes/icons/shield.png"
+ICON_CRITICAL = "Imagenes/icons/critical_hit.png"
 
 
 #Sonidos/musica

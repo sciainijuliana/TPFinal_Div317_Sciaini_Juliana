@@ -7,6 +7,13 @@ import Modulos.auxiliares as aux
 import participante as part
 
 def create_form_victoria (form_dict_data: dict) -> dict:
+    """
+    Crea y configura el formulario de victoria del juego
+
+    Recibe: form_dict_data: Diccionario con la configuración inicial del formulario
+
+    Retorna: Diccionario que representa el formulario de victoria
+    """
     form = form_base.create_base_form(form_dict_data)
     jugador = form_dict_data.get("jugador")
     form["jugador"] = jugador
@@ -27,20 +34,27 @@ def create_form_victoria (form_dict_data: dict) -> dict:
 
     return form
 
-def clear_text (form_dict_data: dict):
-    form_dict_data["text_box"].writing = ""
-
 def subir_nombre (form_dict_data: dict):
+    """
+    Registra el nombre del jugador en el ranking tras la victoria
+
+    Recibe: form_dict_data: Diccionario del formulario de victoria
+    """
     jugador = form_dict_data.get("jugador")
     nombre_jugador = form_dict_data.get("text_box").writing
     part.set_nombre_participante(jugador, nombre_jugador)
 
-    data_to_csv = part.info_to_csv(jugador)
+    data_to_csv = aux.info_to_csv(jugador)
     aux.guardar_info_csv(var.RANKING, data_to_csv)
 
     form_base.set_active("form_ranking")
 
 def update (form_dict_data: dict, eventos: list[pg.event.Event]):
+    """
+    Actualiza el estado del formulario de victoria
+
+    Recibe: form_dict_data: Diccionario del formulario de victoria / eventos: Lista de eventos de Pygame que pueden afectar a los widgets
+    """
     jugador = form_dict_data.get("jugador")
     score_actual = part.get_score_participante(jugador)
     form_dict_data["label_score"].update_text(text=f"SCORE: {score_actual}", color=(254, 215, 0))
@@ -50,6 +64,11 @@ def update (form_dict_data: dict, eventos: list[pg.event.Event]):
     form_base.update_widgets(form_dict_data, eventos)
 
 def draw(form_dict_data: dict):
+    """
+    Dibuja el formulario de victoria en la pantalla
+    
+    Recibe: form_dict_data: Diccionario del formulario de victoria
+    """
     form_base.draw(form_dict_data)
     form_base.dibujar_widgets(form_dict_data)
     form_dict_data.get("text_box").draw()

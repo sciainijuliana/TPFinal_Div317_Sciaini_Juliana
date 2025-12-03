@@ -8,6 +8,13 @@ import Modulos.stage as stage
 
 
 def dbzgame ():
+    """
+    Función principal del juego
+    Inicializa Pygame, configura la ventana del juego y crea el controlador
+    de formularios. Gestiona el bucle principal de ejecución, procesando eventos,
+    actualizando formularios y refrescando la pantalla hasta que el jugador
+    cierre la ventana
+    """
     pg.init()
     
     pg.display.set_caption(var.TITULO_JUEGO)

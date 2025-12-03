@@ -9,6 +9,16 @@ import Modulos.audio as audio
 
 
 def create_form_options (form_dict_data: dict) -> dict:
+    """
+    Crea y configura el formulario de opciones: permite al jugador gestionar la música:
+    - Subir o bajar volumen.
+    - Mutear o reproducir música.
+    - Volver al menú principal.
+
+    Recibe: form_dict_data: Diccionario con la configuración inicial del formulario
+
+    Retorna: Diccionario que representa el formulario de opciones
+    """
     form = form_base.create_base_form(form_dict_data)
 
     form["label_titulo"] = Label(x=500, y=100, text= "OPCIONES", screen=form_dict_data.get("screen"), font_path=var.FUENTE_PRINCIPAL, font_size=70, color=(255, 192, 223))
@@ -17,7 +27,7 @@ def create_form_options (form_dict_data: dict) -> dict:
     form["button_music_down"] = Button(x=700, y=300, text="-", screen=form.get("screen"),font_path=var.FUENTE_PRINCIPAL, font_size=50, color=(255, 192, 223), on_click=bajar_volumen, on_click_param=form)
     form["button_music_mute"] = Button(x=600, y=400, text="MUTE", screen=form.get("screen"),font_path=var.FUENTE_PRINCIPAL, font_size=30, color=(255, 192, 223), on_click=mutear_audio, on_click_param=form)
     form["button_music_play"] = Button(x=400, y=400, text="PLAY", screen=form.get("screen"),font_path=var.FUENTE_PRINCIPAL, font_size=30, color=(255, 192, 223), on_click=play_audio, on_click_param=form)
-    form["button_volver"] = Button(x=500, y=600, text="VOLVER", screen=form.get("screen"),font_path=var.FUENTE_PRINCIPAL, font_size=30, color=(255, 192, 223), on_click=cambiar_pantalla, on_click_param="form_menu")
+    form["button_volver"] = Button(x=500, y=600, text="VOLVER", screen=form.get("screen"),font_path=var.FUENTE_PRINCIPAL, font_size=30, color=(255, 192, 223), on_click=lambda _: aux.activar_form_a_cambiar("form_menu"))
     form["widgets_list"] = [form.get("label_titulo"), form.get("button_music_up"), form.get("button_music_down"), form.get("button_music_mute"), form.get("button_volver"), form.get("label_volumen_actual"), form.get("button_music_play")]
 
     var.dict_forms_status[form.get("name")] = form
@@ -25,18 +35,41 @@ def create_form_options (form_dict_data: dict) -> dict:
     return form
 
 def draw (form_dict_data: dict):
+    """
+    Renderiza la superficie de fondo y dibuja todos los widgets del formulario.
+
+    Recibe: form_dict_data: Diccionario del formulario de opciones.
+    """
     form_base.draw(form_dict_data)
     form_base.dibujar_widgets(form_dict_data)
 
 def update (form_dict_data: dict):
+    """
+    Llama a la función base para refrescar los widgets.
+
+    Recibe: form_dict_data: Diccionario del formulario de opciones.
+    """
     form_base.update(form_dict_data)
 
-def cambiar_pantalla (form_a_cambiar: str):
+def cambiar_pantalla_reiniciando (form_a_cambiar: str):
+    """
+    Cambia la pantalla activa a otro formulario, si el formulario a cambiar es 'form_stage', se reinicia el stage antes de
+    activar el nuevo formulario.
+
+    Recibe: form_a_cambiar: Nombre del formulario al que se desea cambiar
+    """
     if form_a_cambiar == "form_stage":
         aux.reset_stage(var.dict_forms_status.get("form_stage"))
     aux.activar_form_a_cambiar(form_a_cambiar)
 
 def subir_volumen (form_dict_data: dict):
+    """
+    Incrementa el volumen de la música del formulario.
+
+    Recibe: form_dict_data: Diccionario del formulario de opciones
+
+    Retorna: Diccionario del formulario actualizado con el nuevo volumen
+    """
     volumen_actual = audio.get_actual_volume(form_dict_data)
     if volumen_actual < 1.0:
         nuevo_volumen = volumen_actual + 0.1
@@ -61,6 +94,13 @@ def subir_volumen (form_dict_data: dict):
     return form_dict_data
 
 def bajar_volumen(form_dict_data: dict):
+    """
+    Reduce el volumen de la música del formulario.
+
+    Recibe: form_dict_data: Diccionario del formulario de opciones
+
+    Retorna: Diccionario del formulario actualizado con el nuevo volumen
+    """
     volumen_actual = audio.get_actual_volume(form_dict_data)
     if volumen_actual > 0.0:
         nuevo_volumen = volumen_actual - 0.1
@@ -86,9 +126,19 @@ def bajar_volumen(form_dict_data: dict):
     return form_dict_data
 
 def mutear_audio (form_dict_data: dict):
+    """
+    Mutea la música del formulario.
+
+    Recibe: form_dict_data: Diccionario del formulario de opciones.
+    """
     form_dict_data["music_config"]["music_on"] = False
     audio.stop_music()
 
 def play_audio (form_dict_data: dict):
+    """
+    Reproduce la música del formulario.
+
+    Recibe: form_dict_data: Diccionario del formulario de opciones.
+    """
     form_dict_data["music_config"]["music_on"] = True
     audio.play_music(form_dict_data)

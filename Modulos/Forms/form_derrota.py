@@ -7,6 +7,16 @@ import Modulos.auxiliares as aux
 import participante as part
 
 def create_form_derrota (form_dict_data: dict) -> dict:
+    """
+    Crea y configura el formulario de derrota del juego.
+
+    Este formulario se muestra cuando el jugador pierde la partida.
+
+    Recibe: form_dict_data: Diccionario con la configuración inicial del formulario.
+           
+    Retorna: Diccionario que representa el formulario de derrota
+    """
+    
     form = form_base.create_base_form(form_dict_data)
     jugador = form_dict_data.get("jugador")
     form["jugador"] = jugador

@@ -8,6 +8,14 @@ import pygame as pg
 
 
 def create_form_eleccion (form_dict_data: dict) -> dict:
+    """
+    Formulario de elección de mazo: muestra un título y una serie de botones que permiten
+    al jugador seleccionar uno de los mazos disponibles 
+
+    Recibe: form_dict_data: Diccionario con la configuración inicial del formulario
+
+    Retorna: Diccionario que representa el formulario de elección
+    """
     form = form_base.create_base_form(form_dict_data)
 
     form["label_titulo"] = Label(x=500, y=100, text= "ELIGE UN MAZO", screen=form_dict_data.get("screen"), font_path=var.FUENTE_PRINCIPAL, font_size=60, color=(254, 0, 0))
@@ -28,7 +36,7 @@ def create_form_eleccion (form_dict_data: dict) -> dict:
     form["button_15"]= Button(x=500, y=600, text="SELECT", screen=form.get("screen"),font_path=var.FUENTE_PRINCIPAL, font_size=15, color=(254, 0, 0), on_click=confirmar_eleccion, on_click_param=var.DECKS["DECK_15"])
     form["button_16"]= Button(x=660, y=600, text="SELECT", screen=form.get("screen"),font_path=var.FUENTE_PRINCIPAL, font_size=15, color=(254, 0, 0), on_click=confirmar_eleccion, on_click_param=var.DECKS["DECK_16"])
     form["button_17"]= Button(x=820, y=600, text="SELECT", screen=form.get("screen"),font_path=var.FUENTE_PRINCIPAL, font_size=15, color=(254, 0, 0), on_click=confirmar_eleccion, on_click_param=var.DECKS["DECK_17"])
-    form["button_volver"] = Button(x=500, y=150, text="VOLVER", screen=form.get("screen"),font_path=var.FUENTE_PRINCIPAL, font_size=15, color=(254, 0, 0), on_click=opt.cambiar_pantalla, on_click_param="form_menu")
+    form["button_volver"] = Button(x=500, y=150, text="VOLVER", screen=form.get("screen"),font_path=var.FUENTE_PRINCIPAL, font_size=15, color=(254, 0, 0), on_click=lambda _: aux.activar_form_a_cambiar("form_menu"))
 
     form["widgets_list"] = [form.get("button_volver"), form.get("label_titulo"), form.get("button_1"),form.get("button_2"),form.get("button_3"),form.get("button_4"),form.get("button_5"),form.get("button_6"),form.get("button_7"),form.get("button_8"),form.get("button_9"),form.get("button_10"),form.get("button_11"),form.get("button_12"),form.get("button_13"),form.get("button_14"),form.get("button_15"),form.get("button_16"),form.get("button_17")]
 
@@ -37,16 +45,32 @@ def create_form_eleccion (form_dict_data: dict) -> dict:
     return form
 
 def confirmar_eleccion(mazo_elegido: str):
+    """
+    Actualiza la variable global MAZO_ELEGIDO con el mazo seleccionado,
+    reinicia el stage y cambia la pantalla activa al formulario de stage.
+
+    Recibe: mazo_elegido: Nombre del mazo elegido por el jugador.
+    """
     var.MAZO_ELEGIDO = mazo_elegido
     form_stage = var.dict_forms_status.get("form_stage")
     aux.reset_stage(form_stage)  
     aux.activar_form_a_cambiar("form_stage")
 
 def update(form_dict_data: dict):
+    """
+    Actualiza el estado de los widgets del formulario de elección.
+
+    Recibe: form_dict_data: Diccionario del formulario de elección.
+    """
     for boton in form_dict_data["widgets_list"]:
         boton.update()
 
 def draw(form_dict_data: dict):
+    """
+    Dibuja la superficie de fondo y dibuja todos los widgets
+
+    Recibe: form_dict_data: Diccionario del formulario de elección.
+    """
     form_base.draw(form_dict_data)
     for boton in form_dict_data["widgets_list"]:
         boton.draw()

@@ -15,6 +15,16 @@ import Modulos.Forms.form_wish as form_wish
 
 
 def create_form_controller (screen: pg.Surface, datos_juego: dict):
+    """
+    Crea y configura el controlador principal de formularios del juego
+
+    El controlador mantiene la pantalla principal, el estado del juego, el jugador,
+    la configuración de música y la lista de formularios disponibles
+
+    Recibe: screen: Superficie principal donde se dibujan los formularios / datos_juego: Diccionario con datos iniciales del juego. 
+
+    Retorna: Diccionario que representa el controlador de formularios
+    """
     controller = {}
 
     controller["main_screen"] = screen
@@ -76,7 +86,8 @@ def create_form_controller (screen: pg.Surface, datos_juego: dict):
             "active": False,
             "coord": (0,0),
             "music_path": var.MUSICA_TUTORIAL,
-            "background": var.BACKGROUND_TUTORIAL,
+            "backgrounds": var.CARRUSEL_TUTORIAL, 
+            "background": var.CARRUSEL_TUTORIAL[0],
             "screen_dimentions": var.DIMENSION_PANTALLA,
             "music_config": controller.get("music_config"),
             "mazos_dict": controller["mazos_dict"],
@@ -174,6 +185,12 @@ def create_form_controller (screen: pg.Surface, datos_juego: dict):
     return controller
 
 def forms_update (form_controller: dict, eventos: list[pg.event.Event]):
+    """
+    Actualiza y dibuja el formulario que se encuentra activo, ejecuta la lógica de actualización y dibujo de cada form
+
+    Recibe: form_controller: Diccionario del controlador de formularios / Lista de eventos de Pygame que pueden afectar a los formularios.
+    """
+
     lista_formularios = form_controller.get("forms_list")
     events = eventos
 
@@ -224,4 +241,9 @@ def forms_update (form_controller: dict, eventos: list[pg.event.Event]):
     
 
 def update(form_controller: dict, eventos: list[pg.event.Event]):
+    """
+    Llama a forms_update para refrescar el estado y dibujar el formulario activo
+
+    Recibe: form_controller: Diccionario del controlador de formularios / eventos: Lista de eventos de Pygame que pueden afectar a los formularios
+    """
     forms_update(form_controller, eventos)
