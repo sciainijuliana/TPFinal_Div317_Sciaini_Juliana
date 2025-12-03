@@ -1,0 +1,386 @@
+{
+    "jugador": {
+        "nombre": "jul",
+        "hp_inicial": 45900,
+        "hp_actual": 45900,
+        "ataque": 51800,
+        "defensa": 29150,
+        "score": 1350,
+        "mazo": "Decks/blue_deck_expansion_3",
+        "cartas_en_juego": [
+            {
+                "id": "4.2",
+                "hp": "2500",
+                "ataque": "2900",
+                "defensa": "1600",
+                "bonus": "3",
+                "ruta_frente": "Decks/blue_deck_expansion_3/4.2_HP_2500_ATK_2900_DEF_1600_3.png",
+                "ruta_reverse": "Decks/blue_deck_expansion_3\\reverse.png"
+            },
+            {
+                "id": "3.1",
+                "hp": "2600",
+                "ataque": "3000",
+                "defensa": "1800",
+                "bonus": "3",
+                "ruta_frente": "Decks/blue_deck_expansion_3/3.1_HP_2600_ATK_3000_DEF_1800_3.png",
+                "ruta_reverse": "Decks/blue_deck_expansion_3\\reverse.png"
+            },
+            {
+                "id": "5.5",
+                "hp": "2350",
+                "ataque": "2350",
+                "defensa": "1350",
+                "bonus": "2",
+                "ruta_frente": "Decks/blue_deck_expansion_3/5.5_HP_2350_ATK_2350_DEF_1350_2.png",
+                "ruta_reverse": "Decks/blue_deck_expansion_3\\reverse.png"
+            },
+            {
+                "id": "6.14.1",
+                "hp": "1800",
+                "ataque": "2000",
+                "defensa": "1150",
+                "bonus": "3",
+                "ruta_frente": "Decks/blue_deck_expansion_3/6.14.1_HP_1800_ATK_2000_DEF_1150_3.png",
+                "ruta_reverse": "Decks/blue_deck_expansion_3\\reverse.png"
+            },
+            {
+                "id": "2.0",
+                "hp": "2650",
+                "ataque": "3550",
+                "defensa": "2050",
+                "bonus": "3",
+                "ruta_frente": "Decks/blue_deck_expansion_3/2.0_HP_2650_ATK_3550_DEF_2050_3.png",
+                "ruta_reverse": "Decks/blue_deck_expansion_3\\reverse.png"
+            },
+            {
+                "id": "6.12",
+                "hp": "1900",
+                "ataque": "2000",
+                "defensa": "1200",
+                "bonus": "2",
+                "ruta_frente": "Decks/blue_deck_expansion_3/6.12_HP_1900_ATK_2000_DEF_1200_2.png",
+                "ruta_reverse": "Decks/blue_deck_expansion_3\\reverse.png"
+            },
+            {
+                "id": "6.7",
+                "hp": "2500",
+                "ataque": "2700",
+                "defensa": "1500",
+                "bonus": "2",
+                "ruta_frente": "Decks/blue_deck_expansion_3/6.7_HP_2500_ATK_2700_DEF_1500_2.png",
+                "ruta_reverse": "Decks/blue_deck_expansion_3\\reverse.png"
+            },
+            {
+                "id": "2.5",
+                "hp": "2400",
+                "ataque": "3300",
+                "defensa": "1900",
+                "bonus": "2",
+                "ruta_frente": "Decks/blue_deck_expansion_3/2.5_HP_2400_ATK_3300_DEF_1900_2.png",
+                "ruta_reverse": "Decks/blue_deck_expansion_3\\reverse.png"
+            },
+            {
+                "id": "5.4",
+                "hp": "2350",
+                "ataque": "2350",
+                "defensa": "1350",
+                "bonus": "2",
+                "ruta_frente": "Decks/blue_deck_expansion_3/5.4_HP_2350_ATK_2350_DEF_1350_2.png",
+                "ruta_reverse": "Decks/blue_deck_expansion_3\\reverse.png"
+            },
+            {
+                "id": "3",
+                "hp": "2600",
+                "ataque": "3000",
+                "defensa": "1800",
+                "bonus": "3",
+                "ruta_frente": "Decks/blue_deck_expansion_3/3_HP_2600_ATK_3000_DEF_1800_3.png",
+                "ruta_reverse": "Decks/blue_deck_expansion_3\\reverse.png"
+            },
+            {
+                "id": "6.9",
+                "hp": "2050",
+                "ataque": "2050",
+                "defensa": "1150",
+                "bonus": "3",
+                "ruta_frente": "Decks/blue_deck_expansion_3/6.9_HP_2050_ATK_2050_DEF_1150_3.png",
+                "ruta_reverse": "Decks/blue_deck_expansion_3\\reverse.png"
+            },
+            {
+                "id": "6.16",
+                "hp": "1800",
+                "ataque": "2000",
+                "defensa": "1150",
+                "bonus": "3",
+                "ruta_frente": "Decks/blue_deck_expansion_3/6.16_HP_1800_ATK_2000_DEF_1150_3.png",
+                "ruta_reverse": "Decks/blue_deck_expansion_3\\reverse.png"
+            },
+            {
+                "id": "6.3",
+                "hp": "2300",
+                "ataque": "2700",
+                "defensa": "1300",
+                "bonus": "2",
+                "ruta_frente": "Decks/blue_deck_expansion_3/6.3_HP_2300_ATK_2700_DEF_1300_2.png",
+                "ruta_reverse": "Decks/blue_deck_expansion_3\\reverse.png"
+            },
+            {
+                "id": "6.13",
+                "hp": "1900",
+                "ataque": "2000",
+                "defensa": "1200",
+                "bonus": "3",
+                "ruta_frente": "Decks/blue_deck_expansion_3/6.13_HP_1900_ATK_2000_DEF_1200_3.png",
+                "ruta_reverse": "Decks/blue_deck_expansion_3\\reverse.png"
+            },
+            {
+                "id": "7",
+                "hp": "2400",
+                "ataque": "2400",
+                "defensa": "1400",
+                "bonus": "2",
+                "ruta_frente": "Decks/blue_deck_expansion_3/7_HP_2400_ATK_2400_DEF_1400_2.png",
+                "ruta_reverse": "Decks/blue_deck_expansion_3\\reverse.png"
+            },
+            {
+                "id": "4",
+                "hp": "2400",
+                "ataque": "2900",
+                "defensa": "1650",
+                "bonus": "2",
+                "ruta_frente": "Decks/blue_deck_expansion_3/4_HP_2400_ATK_2900_DEF_1650_2.png",
+                "ruta_reverse": "Decks/blue_deck_expansion_3\\reverse.png"
+            },
+            {
+                "id": "6.5",
+                "hp": "2300",
+                "ataque": "2700",
+                "defensa": "1300",
+                "bonus": "2",
+                "ruta_frente": "Decks/blue_deck_expansion_3/6.5_HP_2300_ATK_2700_DEF_1300_2.png",
+                "ruta_reverse": "Decks/blue_deck_expansion_3\\reverse.png"
+            },
+            {
+                "id": "6.4",
+                "hp": "2300",
+                "ataque": "2700",
+                "defensa": "1300",
+                "bonus": "3",
+                "ruta_frente": "Decks/blue_deck_expansion_3/6.4_HP_2300_ATK_2700_DEF_1300_3.png",
+                "ruta_reverse": "Decks/blue_deck_expansion_3\\reverse.png"
+            },
+            {
+                "id": "6.8",
+                "hp": "2400",
+                "ataque": "2400",
+                "defensa": "1400",
+                "bonus": "3",
+                "ruta_frente": "Decks/blue_deck_expansion_3/6.8_HP_2400_ATK_2400_DEF_1400_3.png",
+                "ruta_reverse": "Decks/blue_deck_expansion_3\\reverse.png"
+            },
+            {
+                "id": "3.7",
+                "hp": "2400",
+                "ataque": "2800",
+                "defensa": "1600",
+                "bonus": "2",
+                "ruta_frente": "Decks/blue_deck_expansion_3/3.7_HP_2400_ATK_2800_DEF_1600_2.png",
+                "ruta_reverse": "Decks/blue_deck_expansion_3\\reverse.png"
+            }
+        ],
+        "cartas_usadas": []
+    },
+    "enemigo": {
+        "nombre": "Enemigo",
+        "hp_inicial": 8930,
+        "hp_actual": 8930,
+        "ataque": 7750,
+        "defensa": 4830,
+        "score": 0,
+        "mazo": "Decks/green_deck_expansion_3",
+        "cartas_en_juego": [
+            {
+                "id": "13",
+                "hp": "400",
+                "ataque": "320",
+                "defensa": "220",
+                "bonus": "2",
+                "ruta_frente": "Decks/green_deck_expansion_3/13_HP_400_ATK_320_DEF_220_2.png",
+                "ruta_reverse": "Decks/green_deck_expansion_3\\reverse.png"
+            },
+            {
+                "id": "16",
+                "hp": "370",
+                "ataque": "310",
+                "defensa": "190",
+                "bonus": "2",
+                "ruta_frente": "Decks/green_deck_expansion_3/16_HP_370_ATK_310_DEF_190_2.png",
+                "ruta_reverse": "Decks/green_deck_expansion_3\\reverse.png"
+            },
+            {
+                "id": "22.3",
+                "hp": "150",
+                "ataque": "170",
+                "defensa": "70",
+                "bonus": "1",
+                "ruta_frente": "Decks/green_deck_expansion_3/22.3_HP_150_ATK_170_DEF_70_1.png",
+                "ruta_reverse": "Decks/green_deck_expansion_3\\reverse.png"
+            },
+            {
+                "id": "22",
+                "hp": "190",
+                "ataque": "210",
+                "defensa": "90",
+                "bonus": "2",
+                "ruta_frente": "Decks/green_deck_expansion_3/22_HP_190_ATK_210_DEF_90_2.png",
+                "ruta_reverse": "Decks/green_deck_expansion_3\\reverse.png"
+            },
+            {
+                "id": "16.7",
+                "hp": "370",
+                "ataque": "240",
+                "defensa": "150",
+                "bonus": "1",
+                "ruta_frente": "Decks/green_deck_expansion_3/16.7_HP_370_ATK_240_DEF_150_1.png",
+                "ruta_reverse": "Decks/green_deck_expansion_3\\reverse.png"
+            },
+            {
+                "id": "22.2.1",
+                "hp": "180",
+                "ataque": "190",
+                "defensa": "80",
+                "bonus": "2",
+                "ruta_frente": "Decks/green_deck_expansion_3/22.2.1_HP_180_ATK_190_DEF_80_2.png",
+                "ruta_reverse": "Decks/green_deck_expansion_3\\reverse.png"
+            },
+            {
+                "id": "16.1",
+                "hp": "350",
+                "ataque": "300",
+                "defensa": "170",
+                "bonus": "1",
+                "ruta_frente": "Decks/green_deck_expansion_3/16.1_HP_350_ATK_300_DEF_170_1.png",
+                "ruta_reverse": "Decks/green_deck_expansion_3\\reverse.png"
+            },
+            {
+                "id": "0.0.3",
+                "hp": "2050",
+                "ataque": "2050",
+                "defensa": "1550",
+                "bonus": "2",
+                "ruta_frente": "Decks/green_deck_expansion_3/0.0.3_HP_2050_ATK_2050_DEF_1550_2.png",
+                "ruta_reverse": "Decks/green_deck_expansion_3\\reverse.png"
+            },
+            {
+                "id": "12",
+                "hp": "480",
+                "ataque": "350",
+                "defensa": "240",
+                "bonus": "2",
+                "ruta_frente": "Decks/green_deck_expansion_3/12_HP_480_ATK_350_DEF_240_2.png",
+                "ruta_reverse": "Decks/green_deck_expansion_3\\reverse.png"
+            },
+            {
+                "id": "11",
+                "hp": "420",
+                "ataque": "360",
+                "defensa": "230",
+                "bonus": "2",
+                "ruta_frente": "Decks/green_deck_expansion_3/11_HP_420_ATK_360_DEF_230_2.png",
+                "ruta_reverse": "Decks/green_deck_expansion_3\\reverse.png"
+            },
+            {
+                "id": "12.3",
+                "hp": "420",
+                "ataque": "350",
+                "defensa": "240",
+                "bonus": "1",
+                "ruta_frente": "Decks/green_deck_expansion_3/12.3_HP_420_ATK_350_DEF_240_1.png",
+                "ruta_reverse": "Decks/green_deck_expansion_3\\reverse.png"
+            },
+            {
+                "id": "15.1",
+                "hp": "370",
+                "ataque": "310",
+                "defensa": "190",
+                "bonus": "1",
+                "ruta_frente": "Decks/green_deck_expansion_3/15.1_HP_370_ATK_310_DEF_190_1.png",
+                "ruta_reverse": "Decks/green_deck_expansion_3\\reverse.png"
+            },
+            {
+                "id": "15",
+                "hp": "390",
+                "ataque": "320",
+                "defensa": "200",
+                "bonus": "2",
+                "ruta_frente": "Decks/green_deck_expansion_3/15_HP_390_ATK_320_DEF_200_2.png",
+                "ruta_reverse": "Decks/green_deck_expansion_3\\reverse.png"
+            },
+            {
+                "id": "14",
+                "hp": "380",
+                "ataque": "320",
+                "defensa": "210",
+                "bonus": "2",
+                "ruta_frente": "Decks/green_deck_expansion_3/14_HP_380_ATK_320_DEF_210_2.png",
+                "ruta_reverse": "Decks/green_deck_expansion_3\\reverse.png"
+            },
+            {
+                "id": "22.2",
+                "hp": "180",
+                "ataque": "190",
+                "defensa": "80",
+                "bonus": "1",
+                "ruta_frente": "Decks/green_deck_expansion_3/22.2_HP_180_ATK_190_DEF_80_1.png",
+                "ruta_reverse": "Decks/green_deck_expansion_3\\reverse.png"
+            },
+            {
+                "id": "10",
+                "hp": "450",
+                "ataque": "400",
+                "defensa": "220",
+                "bonus": "2",
+                "ruta_frente": "Decks/green_deck_expansion_3/10_HP_450_ATK_400_DEF_220_2.png",
+                "ruta_reverse": "Decks/green_deck_expansion_3\\reverse.png"
+            },
+            {
+                "id": "1.1",
+                "hp": "850",
+                "ataque": "690",
+                "defensa": "320",
+                "bonus": "2",
+                "ruta_frente": "Decks/green_deck_expansion_3/1.1_HP_850_ATK_690_DEF_320_2.png",
+                "ruta_reverse": "Decks/green_deck_expansion_3\\reverse.png"
+            },
+            {
+                "id": "16.6",
+                "hp": "370",
+                "ataque": "240",
+                "defensa": "150",
+                "bonus": "1",
+                "ruta_frente": "Decks/green_deck_expansion_3/16.6_HP_370_ATK_240_DEF_150_1.png",
+                "ruta_reverse": "Decks/green_deck_expansion_3\\reverse.png"
+            },
+            {
+                "id": "22.1",
+                "hp": "190",
+                "ataque": "190",
+                "defensa": "80",
+                "bonus": "2",
+                "ruta_frente": "Decks/green_deck_expansion_3/22.1_HP_190_ATK_190_DEF_80_2.png",
+                "ruta_reverse": "Decks/green_deck_expansion_3\\reverse.png"
+            },
+            {
+                "id": "16.8",
+                "hp": "370",
+                "ataque": "240",
+                "defensa": "150",
+                "bonus": "1",
+                "ruta_frente": "Decks/green_deck_expansion_3/16.8_HP_370_ATK_240_DEF_150_1.png",
+                "ruta_reverse": "Decks/green_deck_expansion_3\\reverse.png"
+            }
+        ],
+        "cartas_usadas": []
+    }
+}

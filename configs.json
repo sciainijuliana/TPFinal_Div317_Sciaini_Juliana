@@ -1,0 +1,10 @@
+{
+    "coords_enemigo_inicial": [700,450],
+    "coords_jugador_inicial": [100,450],
+    "cantidad_cartas": 20,
+    "coords_enemigo_final": [510,450],
+    "coords_jugador_final": [300,450],
+    "puntaje_stage": 0,
+    "ganador": ""
+
+}
