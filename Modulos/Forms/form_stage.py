@@ -162,7 +162,7 @@ def draw_indicador_escudo(form_dict_data: dict):
     screen = form_dict_data.get("screen")
     
     if part.get_estado_shield(jugador):
-        label_escudo = ImageLabel(x=400, y=300, text="", screen=screen, image_path=var.ICON_SHIELD_ACTIVE, width= 100, height=200, font_path= var.FUENTE_PRINCIPAL, font_size=20, color=(254, 0, 0))
+        label_escudo = ImageLabel(x=400, y=300, text="", screen=screen, image_path=var.ICON_SHIELD_ACTIVE, width= 150, height=200, font_path= var.FUENTE_PRINCIPAL, font_size=20, color=(254, 0, 0))
         label_escudo.draw()    
 
 def draw_indicador_critico(form_dict_data: dict):
